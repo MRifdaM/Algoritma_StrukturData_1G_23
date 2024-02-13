@@ -10,6 +10,7 @@ public class Fungsi {
         };
         int []hrgBunga = {75000, 50000, 60000, 10000};
         pendapatanCabang(st0ckBunga, hrgBunga);
+
         jmlhBunga(st0ckBunga);
     }
 
@@ -21,9 +22,10 @@ public class Fungsi {
             }
         }
 
-        for (int i = 0; i < pendapatan.length; i++){
-            System.out.println("Pendapatan cabang " + i + " : " + pendapatan[i]);
+        for (int i = 0, j = 1; i < pendapatan.length; i++, j++){
+            System.out.println("Pendapatan cabang " + j + " : " + pendapatan[i]);
         }
+        System.out.println();
     }
 
     static void jmlhBunga (int [][]stckBunga) {
