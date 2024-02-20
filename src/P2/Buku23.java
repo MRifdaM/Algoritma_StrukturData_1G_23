@@ -4,9 +4,6 @@ public class Buku23 {
     String judul, pengarang;
     int halaman, stok, harga;
 
-    public Buku23() {
-
-    }
 
     public Buku23(String jud, String pg, int hal, int stok, int har) {
         judul = jud;
