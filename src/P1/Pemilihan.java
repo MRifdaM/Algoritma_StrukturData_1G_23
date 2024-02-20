@@ -1,7 +1,5 @@
 package P1;
-import java.util.Scanner;
-
-import javax.sound.midi.SysexMessage; 
+import java.util.Scanner; 
 
 public class Pemilihan {
     public static void main(String[] args) {
