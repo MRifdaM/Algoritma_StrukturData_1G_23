@@ -3,8 +3,13 @@ import java.util.Scanner;
 
 public class ArrayObjects {
     public static void main(String[] args) {
-        persegiPanjang[] ppArray = new persegiPanjang[3];
         Scanner sc23 = new Scanner(System.in);
+        int n = 0;
+
+        System.out.print("Masukkan panjang element ppArray: ");
+        n = sc23.nextInt();
+
+        persegiPanjang[] ppArray = new persegiPanjang[n];
         for (int i = 0; i < 3; i++) {
             ppArray[i] = new persegiPanjang();
             System.out.println("Persegi panjang ke-" + i);
