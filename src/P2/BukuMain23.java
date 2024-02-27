@@ -20,6 +20,6 @@ public class BukuMain23 {
 
         Buku23 buku = new Buku23("Tutorial Java", "Muhammad Rifda Musyaffa'", 100, 40, 89000);
         buku.tampilInformasi();
-        buku.hitungHargaBayar(buku.hitungHargaTotal(10), buku.hitungDiskon(buku.hitungHargaTotal(10)));
+        System.out.println(buku.hitungHargaBayar(buku.hitungHargaTotal(10), buku.hitungDiskon(buku.hitungHargaTotal(10))));
     }
 }
