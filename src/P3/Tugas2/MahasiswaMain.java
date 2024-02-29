@@ -36,7 +36,7 @@ public class MahasiswaMain {
         System.out.println();
         System.out.printf("%-10s %.2f", "Rata-rata IPK mahasiswa : ", rataRataIPK);
         System.out.println();
-        Mahasiswa.IPKTerbesar(mahasiswa);
+        Mahasiswa.IPKTerbesar(daftarIPK, n, mahasiswa);
         sc23.close();
     }
 }

@@ -22,13 +22,24 @@ public class Mahasiswa {
     }
 
     
-    public static void IPKTerbesar(Mahasiswa[] mahasiswa) {
-        if (mahasiswa[0].ipk > mahasiswa[1].ipk && mahasiswa[0].ipk > mahasiswa[2].ipk){
-            System.out.println("Mahasiswa: " + mahasiswa[0].nama + ", IPK: " + mahasiswa[0].ipk);
-        } else if (mahasiswa[1].ipk > mahasiswa[0].ipk && mahasiswa[1].ipk > mahasiswa[2].ipk) {
-            System.out.println("Mahasiswa: " + mahasiswa[1].nama + ", IPK: " + mahasiswa[1].ipk);
-        }else if (mahasiswa[2].ipk > mahasiswa[0].ipk && mahasiswa[2].ipk > mahasiswa[1].ipk) {
-            System.out.println("Mahasiswa: " + mahasiswa[2].nama + ", IPK: " + mahasiswa[2].ipk);
+    public static void IPKTerbesar(double[] IPK,int jumlah, Mahasiswa[] mahasiswa) {
+        double[] dataIPK = new double[jumlah]; 
+        Mahasiswa[] dataMahasiswa = new Mahasiswa[jumlah];
+        for (int i = 0; i < jumlah; i++) {
+            dataIPK[i] = IPK[i];
+            dataMahasiswa[i] = mahasiswa[i];
         }
+
+        for (int i = 0, j = i+1; i < jumlah-1; i++) {
+            if (dataIPK[i] < dataIPK[j]) {
+                double temp = dataIPK[i];
+                Mahasiswa tempNama = dataMahasiswa[i];
+                dataIPK[i] = dataIPK[j];
+                dataMahasiswa[i] = dataMahasiswa[j];
+                dataIPK[j] = temp;
+                dataMahasiswa[j] = tempNama;
+            }
+        }
+        System.out.println("Mahasiswa: "  + dataMahasiswa[0].nama + ", IPK: " + dataIPK[0]);
     }
 }
