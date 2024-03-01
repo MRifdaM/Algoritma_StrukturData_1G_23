@@ -13,11 +13,11 @@ public class Mahasiswa {
     }
 
     public static double rataIPK(int jumlah, double[] IPK) {
-        double[] dataIPK = new double[jumlah];
+        double dataIPK = 0;
         for (int i = 0; i < jumlah; i++) {
-            dataIPK[i] = IPK[i];
+            dataIPK += IPK[i];
         }
-        double rataIPK = (dataIPK[0] + dataIPK[1] + dataIPK[2]) / jumlah;
+        double rataIPK =dataIPK / jumlah;
         return rataIPK;
     }
 
