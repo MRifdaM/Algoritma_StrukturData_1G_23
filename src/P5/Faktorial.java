@@ -5,12 +5,9 @@ public class Faktorial {
 
 
     int faktorialBF(int n) {
-        int fakto = 1, i =1, j = n;
-        while(i <= n ) {
-            int a = j;
-            j--;
-            fakto *= a;
-            i++;
+        int fakto = 1;
+        for (int i = 1; i <= n; i++) {
+            fakto *= i;
         }
         return fakto;
     }
