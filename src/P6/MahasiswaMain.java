@@ -28,5 +28,9 @@ public class MahasiswaMain {
         list.selectionSort();
         list.tampil();
         System.out.println();
+
+        System.out.println("Data mahasiswa setelah disorting asc berdasarkan ipk secara insertion = ");
+        list.insertionSort();
+        list.tampil();
     }
 }
