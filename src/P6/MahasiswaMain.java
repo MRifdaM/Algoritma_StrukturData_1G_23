@@ -19,8 +19,13 @@ public class MahasiswaMain {
         list.tampil();
         System.out.println();
 
-        System.out.println("Data mahasiswa setelah disorting = ");
+        System.out.println("Data mahasiswa setelah disorting des berdasarkan ipk = ");
         list.bubbleSort();
+        list.tampil();
+        System.out.println();
+
+        System.out.println("Data mahasiswa setelah disorting asc berdasarkan ipk = ");
+        list.selectionSort();
         list.tampil();
         System.out.println();
     }
