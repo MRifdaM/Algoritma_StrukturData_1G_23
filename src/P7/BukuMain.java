@@ -43,6 +43,15 @@ public class BukuMain {
         data.tampilPosisi(cari, posisi);
         data.tampilData(cari, posisi);
 
+        System.out.println("=================================================");
+        Buku dataBuku = data.findBuku(cari);
+        if(dataBuku != null) {
+            dataBuku.tampilDataBuku();
+        } else {
+            System.out.println("Data buku dengan kode " + cari + " tidak ditemukan.");
+        }
+
+
         sc23.close();
         sc23_2.close();
     }
