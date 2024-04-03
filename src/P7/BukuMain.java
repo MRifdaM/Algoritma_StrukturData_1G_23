@@ -51,7 +51,11 @@ public class BukuMain {
             System.out.println("Data buku dengan kode " + cari + " tidak ditemukan.");
         }
 
-
+        System.out.println("=================================================");
+        System.out.println("Menggunakan binary search ");
+        posisi = data.findBinarySearch(cari, 0, jmlBuku-1);
+        data.tampilPosisi(cari, posisi);
+        data.tampilData(cari, posisi);
         sc23.close();
         sc23_2.close();
     }
