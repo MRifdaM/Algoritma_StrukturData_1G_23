@@ -45,11 +45,7 @@ public class BukuMain {
 
         System.out.println("=================================================");
         Buku dataBuku = data.findBuku(cari);
-        if(dataBuku != null) {
-            dataBuku.tampilDataBuku();
-        } else {
-            System.out.println("Data buku dengan kode " + cari + " tidak ditemukan.");
-        }
+        dataBuku.tampilDataBuku();
 
         System.out.println("=================================================");
         System.out.println("Menggunakan binary search ascending");

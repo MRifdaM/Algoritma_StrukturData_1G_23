@@ -51,12 +51,12 @@ public class PencarianBuku {
     }
 
     Buku findBuku(int cari) {
-        for (int i = 0; i < listBuku.length; i++) {
-            if (cari == listBuku[i].kodeBuku) {
-                return listBuku[i];
-            }
+        int posisi = findSeqSearch(cari);
+        if (posisi != -1) {
+            return listBuku[posisi];
+        } else {
+            return new Buku(0, "kosong", 0, "kosong", 0);
         }
-        return null;
     }
 
     int findBinarySearchAsc(int cari, int left, int right){
