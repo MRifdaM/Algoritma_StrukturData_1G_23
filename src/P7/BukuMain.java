@@ -52,8 +52,14 @@ public class BukuMain {
         }
 
         System.out.println("=================================================");
-        System.out.println("Menggunakan binary search ");
-        posisi = data.findBinarySearch(cari, 0, jmlBuku-1);
+        System.out.println("Menggunakan binary search ascending");
+        posisi = data.findBinarySearchAsc(cari, 0, jmlBuku-1);
+        data.tampilPosisi(cari, posisi);
+        data.tampilData(cari, posisi);
+
+        System.out.println("=================================================");
+        System.out.println("Menggunakan binary search descending");
+        posisi = data.findBinarySearchDes(cari, 0, jmlBuku-1);
         data.tampilPosisi(cari, posisi);
         data.tampilData(cari, posisi);
         sc23.close();
