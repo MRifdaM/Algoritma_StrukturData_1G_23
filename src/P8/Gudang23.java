@@ -36,13 +36,15 @@ public class Gudang23 {
         }
     }
 
-    public void ambilBarang(){
+    public Barang23 ambilBarang(){
         if(!cekKosong()){
             Barang23 delete = tumpukan[top];
             top--;
             System.out.println("Barang " + delete.nama + " berhasil diambil dari gudang");
+            return delete;
         } else {
             System.out.println("Gagal! Tumpukan barang kosong");
+            return null;
         }
     }
 
