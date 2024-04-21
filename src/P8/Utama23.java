@@ -17,7 +17,9 @@ public class Utama23 {
             System.out.println("2. Ambil barang");
             System.out.println("3. Tampilkan tumpukan barang");
             System.out.println("4. Lihat Barang Teratas");
-            System.out.println("5. Keluar");
+            System.out.println("5. Lihat Barang Terbawah");
+            System.out.println("6. Cari Barang di Gudang");
+            System.out.println("7. Keluar");
             System.out.print("Pilih Operasi : ");
             int menu = sc23.nextInt();
 
@@ -47,6 +49,21 @@ public class Utama23 {
                 break;
 
                 case 5:
+                Barang23 barangTerbawah = gudang.lihatBarangTerbawah();
+                if (barangTerbawah != null) {
+                    System.out.println("Barang terbawah: " + barangTerbawah.nama);
+                } else {
+                    System.out.println("Tumpukan kosong");
+                }
+                break;
+
+                case 6:
+                System.out.print("Masukkan kode barang yang dicari: ");
+                int cari = sc23.nextInt();
+                gudang.cariBarang(cari);
+                break;
+
+                case 7:
                 sc23.close();
                 break;
 

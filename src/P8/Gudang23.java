@@ -85,4 +85,60 @@ public class Gudang23 {
         }
         return biner;
     }
+
+    public Barang23 lihatBarangTerbawah(){
+        if (!cekKosong()){
+            Barang23 barangTerbawah = tumpukan[0];
+            return barangTerbawah;
+        } else {
+            return null;
+        }
+    }
+
+    public void cariBarang(int cari){
+        Barang23[] tumpukanBaru = new Barang23[tumpukan.length];
+        for (int i = 0; i < tumpukanBaru.length; i++){
+            if(tumpukan[i] != null){
+                tumpukanBaru[i] = new Barang23(tumpukan[i].kode, tumpukan[i].nama, tumpukan[i].kategori);
+            }
+        }
+
+        for(int i = 1; i < tumpukanBaru.length; i++){
+            Barang23 temp = tumpukanBaru[i];
+            if(temp != null) {
+                int j = i;
+                    while(j > 0 && tumpukanBaru[j-1] != null && temp.kode < tumpukanBaru[j-1].kode) {
+                        tumpukanBaru[j] = tumpukanBaru[j-1];
+                        j--;
+                    }
+                tumpukanBaru[j] = temp;
+            }
+        }
+
+        int result = binarySearch(tumpukanBaru, cari, 0, tumpukanBaru.length-1);
+        if(result != -1){
+            System.out.println("Barang dengan kode " + cari + " ada di Gudang");
+        } else {
+            System.out.println("Barang dengan kode " + cari + " tidak ada di Gudang");
+        }
+    }
+
+    public int binarySearch(Barang23[] tumpukanBaru, int cari,int left, int right){
+        int mid;
+        if (right >= left){
+            mid = (left + right) / 2;
+            if (tumpukanBaru[mid] != null) {
+                if (cari == tumpukanBaru[mid].kode) {
+                    return mid;
+                } else if (cari < tumpukanBaru[mid].kode) {
+                    return binarySearch(tumpukanBaru, cari, left, mid - 1);
+                } else {
+                    return binarySearch(tumpukanBaru, cari, mid + 1, right);
+                }
+            } else {
+                return binarySearch(tumpukanBaru, cari, left, mid -1);
+            }
+        }
+        return -1;
+    }
 }
