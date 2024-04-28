@@ -96,5 +96,13 @@ public class Queue {
             System.out.println("Queue masih kosong");
         }
     }
+
+    public void peekRear(){
+        if(isEmpty()){
+            System.out.println("Queue masih kosong");
+        } else {
+            System.out.println("Elemen terdepan: " + data[rear].norek + " " + data[rear].nama + " " + data[rear].alamat + " " + data[rear].umur + " " + data[rear].saldo);
+        }
+    }
 }
 
