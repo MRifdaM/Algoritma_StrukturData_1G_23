@@ -9,6 +9,8 @@ public class QueueMain {
         int n = sc23.nextInt();
         Queue q = new Queue(n);
 
+        boolean isRun = true;
+
         do {
             menu();
             pilih = sc23.nextInt();
@@ -16,14 +18,11 @@ public class QueueMain {
                 case 1:
                     System.out.print("Masukkan data baru: ");
                     int dataMasuk = sc23.nextInt();
-                    q.enqueue(dataMasuk);
+                    isRun = q.enqueue(dataMasuk);
                     break;
 
                 case 2:
-                    int dataKeluar = q.dequeue();
-                    if(dataKeluar != 0){
-                        System.out.println("Data yang dikeluarkan " + dataKeluar);
-                    }
+                    isRun = q.dequeue();
                     break;
 
                 case 3:
@@ -37,10 +36,13 @@ public class QueueMain {
                 case 5:
                     q.clear();
                     break;
-            
+                
+                case 6:
+                    isRun = false;
+                    break;
             }
             
-        } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4 || pilih == 5);
+        } while (isRun);
         sc23.close();
     }
 
@@ -51,6 +53,7 @@ public class QueueMain {
         System.out.println("3. Print");
         System.out.println("4. Peek");
         System.out.println("5. Clear");
+        System.out.println("6. Keluar");
         System.out.println("-------------------------------------------");
     }
 }
