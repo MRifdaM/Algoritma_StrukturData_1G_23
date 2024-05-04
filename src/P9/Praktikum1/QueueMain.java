@@ -18,7 +18,7 @@ public class QueueMain {
                 case 1:
                     System.out.print("Masukkan data baru: ");
                     int dataMasuk = sc23.nextInt();
-                    isRun = q.enqueue(dataMasuk);
+                    q.enqueue(dataMasuk);
                     break;
 
                 case 2:
