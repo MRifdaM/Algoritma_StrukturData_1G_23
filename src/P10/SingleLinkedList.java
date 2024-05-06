@@ -51,7 +51,7 @@ public class SingleLinkedList {
                 ndInput.next = temp.next;
                 temp.next = ndInput;
                 if(ndInput.next == null){
-                    tail = ndInput;
+                    tail =  ndInput;
                     break;
                 }
             }
