@@ -1,7 +1,5 @@
 package Kuis2.Rifda;
 
-import P10.Node;
-
 public class DoubleLinkedlistPesanan23 {
     NodePesanan23 head23, tail23;
 

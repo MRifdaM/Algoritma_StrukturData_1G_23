@@ -79,5 +79,7 @@ public class RestoranMain {
                 break;
             }
         }
+        rifda1.close();
+        rifda2.close();
     }
 }
