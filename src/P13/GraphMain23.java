@@ -1,8 +1,11 @@
 package P13;
+import java.util.Scanner;
 
 public class GraphMain23 {
     public static void main(String[] args) throws Exception {
         Graph23 gedung = new Graph23(6);
+        Scanner sc = new Scanner(System.in);
+        boolean isRun =  true;
         gedung.addEdge(0, 1, 50);
         gedung.addEdge(0, 2, 100);
         gedung.addEdge(1, 3, 70);
@@ -13,5 +16,18 @@ public class GraphMain23 {
         gedung.printGraph();
         gedung.removeEdge(1, 3);
         gedung.printGraph();
+
+        while(isRun){
+            System.out.print("Masukkan gedung asal: ");
+            int asal = sc.nextInt();
+            System.out.print("Masukkan gedung tujuan: ");
+            int tujuan = sc.nextInt();
+            gedung.isConnected(asal, tujuan);
+            System.out.print("Apakah Anda ingin memeriksa lagi? (y/n): ");
+            char again = sc.next().charAt(0);
+            if (again != 'y') {
+                break;
+            }
+        }
     }
 }

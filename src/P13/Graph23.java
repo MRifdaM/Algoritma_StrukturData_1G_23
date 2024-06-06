@@ -58,4 +58,23 @@ public class Graph23 {
         }
         System.out.println("");
     }
+
+    public void isConnected(int asal, int tujuan){
+        if(list[asal].isEmpty()){
+            System.out.println("Graph masih kosong");
+        } else {
+            boolean connected = false;
+            Node current = list[asal].head;
+            while (current != null){
+                if(current.data == tujuan){
+                    System.out.println("Gedung " + (char) ('A' + asal) + " dan " + (char) ('A' + tujuan) + " bertetangga");
+                    connected = true;
+                } 
+                current = current.next;
+            }
+            if (!connected){
+                System.out.println("Gedung " + (char) ('A' + asal) + " dan " + (char) ('A' + tujuan) + " tidak bertetangga");
+            }
+        }
+    }
 }
